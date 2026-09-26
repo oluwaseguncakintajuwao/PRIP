@@ -1,0 +1,11 @@
+ticker,asset_name,asset_class,region,currency,portfolio_role,target_weight,due_diligence_note
+SPY,SPDR S&P 500 ETF,US Large Cap Equity,United States,USD,Core US equity exposure,0.10,Selected as broad US large-cap equity exposure for baseline portfolio construction
+QQQ,Invesco QQQ ETF,US Growth Equity,United States,USD,Growth and technology tilt,0.10,Selected to provide growth-oriented exposure with a technology-heavy profile
+IWM,iShares Russell 2000 ETF,US Small Cap Equity,United States,USD,Small-cap equity exposure,0.10,Selected to add size diversification beyond large-cap equities
+EFA,iShares MSCI EAFE ETF,Developed International Equity,Global ex-US,USD,Developed international diversification,0.10,Selected to provide exposure to developed markets outside the United States and Canada
+EEM,iShares MSCI Emerging Markets ETF,Emerging Markets Equity,Emerging Markets,USD,Emerging markets growth exposure,0.10,Selected to add higher-risk global growth exposure from emerging markets
+AGG,iShares Core U.S. Aggregate Bond ETF,Core Fixed Income,United States,USD,Core bond exposure,0.10,Selected to provide diversified investment-grade fixed income exposure
+TLT,iShares 20+ Year Treasury Bond ETF,Long-Term Government Bonds,United States,USD,Duration and defensive bond exposure,0.10,Selected to provide long-duration Treasury exposure for interest-rate sensitivity analysis
+LQD,iShares iBoxx Investment Grade Corporate Bond ETF,Investment Grade Corporate Bonds,United States,USD,Corporate credit exposure,0.10,Selected to add investment-grade corporate bond exposure and credit-risk analysis
+VNQ,Vanguard Real Estate ETF,Real Estate,United States,USD,Listed real estate exposure,0.10,Selected to provide real asset and income-oriented exposure through listed REITs
+GLD,SPDR Gold Shares,Gold/Commodity,Global,USD,Defensive alternative exposure,0.10,Selected to provide gold exposure as a defensive diversifier during market stress
