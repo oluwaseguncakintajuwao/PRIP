@@ -19,3 +19,7 @@ venv/
 # Operating system files
 .DS_Store
 Thumbs.db
+
+# Local environment variables / secrets
+.env
+.env.*
