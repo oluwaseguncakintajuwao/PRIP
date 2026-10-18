@@ -23,3 +23,6 @@ Thumbs.db
 # Local environment variables / secrets
 .env
 .env.*
+
+.vscode/
+data/processed/run_metadata/
