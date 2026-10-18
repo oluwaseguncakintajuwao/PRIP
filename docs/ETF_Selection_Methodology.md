@@ -93,6 +93,16 @@ Historical prices are downloaded from Tiingo, which provides free end-of-day mar
 
 Tiingo provides market prices, not fund NAVs or index levels. Metrics that require NAV or index data, such as tracking difference and premium/discount behavior, will need an additional source, which will be documented in the phase that uses it.
 
+PRIP treats market-data persistence separately from market-data
+acquisition. Where the applicable Tiingo license does not permit
+persistent storage, Tiingo data are processed transiently and are not
+retained as raw or reconstructable datasets after the analytical run.
+Project-owned configuration, methodology, validation metadata,
+synthetic test data, and permitted analytical outputs may be retained.
+
+The resulting architecture and licensing decision are documented in
+`docs/decisions/ADR-001_Tiingo_Data_Retention.md`.
+
 
 ## 6. Current Limitations
 

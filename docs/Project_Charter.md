@@ -1,6 +1,6 @@
 # Project Charter — Portfolio Risk Intelligence Platform (PRIP)
 
-*Last updated: 2026-09-25*
+*Last updated: 2026-10-03*
 
 > **Purpose:** This charter defines the business problem, objectives, users, scope, analytical architecture, technology stack, research foundation, project modules, delivery roadmap, assumptions, and success criteria for the Portfolio Risk Intelligence Platform.
 
@@ -217,7 +217,7 @@ PRIP will follow the general analytical workflow:
 
 ↓
 
-**Structured SQL Storage**
+**License-Compliant Analytical Storage**
 
 ↓
 
@@ -284,7 +284,7 @@ Initial libraries include:
 
 ### SQL
 
-SQL provides the structured analytical storage layer.
+SQL provides the structured analytical storage layer. **Raw/historical market prices are stored only where licensing permits**
 
 Planned datasets include:
 
@@ -471,7 +471,7 @@ A key objective of PRIP is to demonstrate that portfolio analytics should be con
 Data-management practices will include:
 
 * identifying the source of every external dataset,
-* retaining raw data separately from processed data,
+* license-aware retention/transient processing,
 * documenting transformation logic,
 * checking for missing observations,
 * identifying duplicate records,
@@ -481,7 +481,7 @@ Data-management practices will include:
 * documenting extraction dates,
 * and recording known data limitations.
 
-Raw data should not be manually overwritten after ingestion.
+Where source-data retention is permitted, raw datasets are treated as immutable inputs. Where retention is not permitted, source data are processed transiently and are not persisted after the analytical run.
 
 ---
 
@@ -530,6 +530,7 @@ The high-level roadmap is:
 | Phase   | Focus                                                          | Module(s) |
 | ------- | --------------------------------------------------------------- | --------- |
 | Phase 1a  | Portfolio data foundation, ETF universe, SQL schema setup       | Module 1  |
+| Phase 1a.5 | DataOps and DevOps Foundation                                  |Module 1 |
 | Phase 1b  | Portfolio performance and risk analytics                        | Module 2  |
 | Phase 1c  | ETF due diligence (quantitative Efficiency–Tradability–Fit)      | Module 3  |
 | Phase 1d  | ETF portfolio rebalancing engine                                 | Module 4  |
@@ -580,6 +581,7 @@ The project currently assumes:
 * public ETF data can support an educational simulation of institutional portfolio workflows;
 * free and public data may not replicate the quality, latency, licensing, or completeness of institutional market-data platforms;
 * historical relationships do not imply future investment performance;
+* market-data licensing and retention constraints;
 * public-market ETFs represent only part of the institutional investment opportunity set;
 * ETF holdings data is available in structured form (e.g., CSV) from providers, and Alteryx Intelligence Suite is not required for core holdings ingestion (see Section 9);
 * and the six-week core-module timeline in Section 13 is compressed relative to the scope defined in Section 10, and is a schedule risk rather than a firm commitment.
@@ -598,7 +600,7 @@ At minimum, the completed project should demonstrate:
 * research-supported ETF selection,
 * reproducible market-data acquisition,
 * controlled data transformation,
-* structured data storage,
+* license-compliant analytical storage,
 * valid portfolio-return calculations,
 * portfolio-risk analytics,
 * at least one automated portfolio workflow,

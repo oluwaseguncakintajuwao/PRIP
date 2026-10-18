@@ -142,4 +142,25 @@ This confirms that the two output columns agree. It does not independently verif
 
 The portfolio nearly tripled over 11.75 years. **Phase 1b — Portfolio Performance and Risk Analytics** asks what risk it took to get there: how volatile the path was, how deep the drawdowns ran, and which ETFs contributed most of the risk.
 
+
+## Post-Phase Architecture Amendment
+
+**Added 2026-10-03**
+
+Phase 1a was originally implemented with persistent raw and processed
+Tiingo datasets to support reproducibility and auditability.
+
+During the subsequent Phase 1a.5 DataOps and DevOps review, the
+applicable market-data retention requirements were examined in greater
+detail. PRIP therefore adopted a license-aware transient-processing
+architecture for Tiingo data.
+
+The Phase 1a calculations and validation results remain the historical
+record of the completed phase. The persistence architecture is being
+refactored in Phase 1a.5.
+
+See:
+
+`docs/decisions/ADR-001_Tiingo_Data_Retention.md`
+
 *Status: Complete*
